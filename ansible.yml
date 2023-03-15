@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+     - name: nexus url
+          get_url:
+             url: 
+             dest: /home/ec2-user
+          copy:
+             src: /home/ec2-user/vprofile-v1
+             dest: /home/ec2-user/apache-tomcat-9.0.72/webapps
+          shell:
+             command: nohup /home/ec2-user/apache-tomcat-9.0.72/bin/startup.sh
