@@ -3,13 +3,13 @@
   become: yes
   tasks:
      - name: nexus url
-          get_url: 
-             url: http://172.31.34.182:8081/nexus/content/repositories/maheshrepo/vpro-1/vprofile/4/vprofile-4.war
-             dest: /home/ec2-user
+       get_url: 
+          url: http://172.31.34.182:8081/nexus/content/repositories/maheshrepo/vpro-1/vprofile/4/vprofile-4.war
+          dest: /home/ec2-user
      - name: copy        
-          copy:
-             src: /home/ec2-user/vprofile-4.war
-             dest: /home/ec2-user/apache-tomcat-9.0.72/webapps
+       copy:
+          src: /home/ec2-user/vprofile-4.war
+          dest: /home/ec2-user/apache-tomcat-9.0.72/webapps
      - name: start service     
-          shell:
-             command: nohup /home/ec2-user/apache-tomcat-9.0.72/bin/startup.sh
+       shell:
+          command: nohup /home/ec2-user/apache-tomcat-9.0.72/bin/startup.sh
