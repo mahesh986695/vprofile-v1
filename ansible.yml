@@ -4,7 +4,7 @@
   tasks:
      - name: nexus url
           get_url:
-             url: 
+             url: http://13.250.65.99:8081/nexus/service/local/repositories/maheshrepo/content/vpro/vprofile/8/vprofile-8.war
              dest: /home/ec2-user
           copy:
              src: /home/ec2-user/vprofile-v1
