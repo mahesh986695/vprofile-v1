@@ -4,10 +4,10 @@
   tasks:
      - name: nexus url
           get_url: 
-             url: http://172.31.34.182:8081/nexus/content/repositories/maheshrepo/vpro/vprofile/2/vprofile-2.war
+             url: http://172.31.34.182:8081/nexus/content/repositories/maheshrepo/vpro-1/vprofile/4/vprofile-4.war
              dest: /home/ec2-user
           copy:
-             src: /home/ec2-user/vprofile-v1
+             src: /home/ec2-user/vprofile-4.war
              dest: /home/ec2-user/apache-tomcat-9.0.72/webapps
           shell:
              command: nohup /home/ec2-user/apache-tomcat-9.0.72/bin/startup.sh
