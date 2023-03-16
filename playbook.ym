@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+ 
+     - name: copy        
+       copy:
+          src: /opt/playbook/vprofile-v1.war
+          dest: /home/ec2-user/apache-tomcat-9.0.73/webapps
+     - name: start service     
+       shell: ./startup.sh
+       args: 
+          chdir: /home/ec2-user/apache-tomcat-9.0.73/bin/
