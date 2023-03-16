@@ -1,0 +1,6 @@
+---
+- hosts: all
+become: yes
+
+- name: docker image
+  shell: docker build -t mahesh986695/abcd:1 .
