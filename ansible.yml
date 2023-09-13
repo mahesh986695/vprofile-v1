@@ -4,11 +4,11 @@
   tasks:
      - name: nexus url
        get_url:
-          url: http://3.109.58.82:8081/nexus/service/local/repositories/mahesh/content/vprofile/vprofile-v1/{{$BUILD_ID}}/vprofile-v1-{{$BUILD_ID}}.war
+          url: http://3.109.58.82:8081/nexus/service/local/repositories/mahesh/content/vprofile/vprofile-v1/{{BUILD_ID}}/vprofile-v1-{{BUILD_ID}}.war
           dest: /home/ec2-user
      - name: copy
        copy:
-          src: /home/ec2-user/vprofile-v1-{{$BUILD_ID}}.war
+          src: /home/ec2-user/vprofile-v1-{{BUILD_ID}}.war
           dest: /home/ec2-user/apache-tomcat-9.0.80/webapps
           remote_src: true
      - name: start service
