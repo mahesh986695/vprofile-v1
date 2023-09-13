@@ -4,11 +4,11 @@
   tasks:
      - name: nexus url
        get_url: 
-          url: http://3.109.58.82:8081/nexus/service/local/repositories/mahesh/content/vprofile/vprofile-v1/1/vprofile-v1-1.war
+          url: http://172.31.12.114:8081/nexus//content/repositories/mahesh/vprofile/vprofile-v1/9/vprofile-v1-9.war
           dest: /home/ec2-user
      - name: copy        
        copy:
-          src: /home/ec2-user/vprofile-v1-1
+          src: /home/ec2-user/vprofile-v1-9
           dest: /home/ec2-user/apache-tomcat-9.0.80/webapps
      - name: start service     
        shell: ./startup.sh
