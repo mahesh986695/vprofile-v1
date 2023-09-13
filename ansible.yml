@@ -14,5 +14,5 @@
      - name: start service
        shell: ./startup.sh
        args:
-          chdir: /home/ec2-user/apache-tomcat-9.0.80/bin/---
+          chdir: /home/ec2-user/apache-tomcat-9.0.80/bin/
 
