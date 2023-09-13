@@ -12,7 +12,6 @@
           dest: /home/ec2-user/apache-tomcat-9.0.80/webapps
           remote_src: true
      - name: start service
-       shell: ./startup.sh
-       args:
-          chdir: /home/ec2-user/apache-tomcat-9.0.80/bin/
+       shell: 
+          command: nohup /home/ec2-user/apache-tomcat-9.0.80/bin/startup.sh
 
