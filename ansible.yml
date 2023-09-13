@@ -8,7 +8,7 @@
           dest: /home/ec2-user
      - name: copy
        copy:
-          src: /home/ec2-user/vprofile-v1-9
+          src: /home/ec2-user/vprofile-v1-9.war
           dest: /home/ec2-user/apache-tomcat-9.0.80/webapps
           remote_src: true
      - name: start service
