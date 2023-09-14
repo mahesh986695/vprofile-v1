@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: docker image
+      shell: docker build -t mahesh986695/tom:2 .
+    - name: push image
+      shell: docker push mahesh986695/tom:2
+    - name: run
+      shell: docker run -d -p 8090:8080 mahesh986695/tom
