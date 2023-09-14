@@ -3,8 +3,8 @@
   become: yes
   tasks:
     - name: docker image
-      shell: docker build -t mahesh986695/abcd:1 .
+      shell: docker build -t mahesh986695/tom .
     - name: push image
-      shell: docker push mahesh986695/abcd:1
+      shell: docker push mahesh986695/tom
     - name: run
-      shell: docker run -d -p 8090:8080 mahesh986695/abcd:1
+      shell: docker run -d -p 8090:8080 mahesh986695/tom
