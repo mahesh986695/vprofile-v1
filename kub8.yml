@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: deplyoment
+      shell: kubectl apply -f deployment.yml
+    - name: service
+      shell: kubectl apply -f service.yml
